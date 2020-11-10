@@ -10,8 +10,11 @@ function navbarTogglerClick(){
 }
 
 navbarLinks.forEach(elem => elem.addEventListener("click",navbarLinkClick));
+
 function navbarLinkClick(event){
+    
     smoothScroll(event); //call the 'smoothScroll' function
+    
     if(navbarMenu.classList.contains("open")){ //close navbarmenu in smaller screen
         navbarToggler.click();
     }
