@@ -1,6 +1,14 @@
 const navbarToggler =document.querySelector(".navbar-toggler");
 const navbarMenu =document.querySelector(".navbar ul");
 const navbarLinks = document.querySelectorAll(".navbar a");
+    for(let n in navbarLinks){
+        if(navbarLinks.hasOwnProperty(n)){
+            navbarLinks[n].addEventListener('click',e => {
+                e.preventDefault();
+                document.querySelector(navbarLinks[n].hash)
+            })
+        }
+    }
 
 navbarToggler.addEventListener("click",navbarTogglerClick);
 

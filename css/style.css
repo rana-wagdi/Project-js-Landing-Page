@@ -13,17 +13,17 @@ ul li{
     padding: 0 120px;
 
 }
+
 .cover{
-    height: 600px;
+    height: 90vh;
     background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
- h1{
-    font-size:80px;
-    text-align: center;
-    padding: 200px 0;
+.cover h1{
+    margin: 100px;
+    font-size: 50px;
     font-family: 'Pacifico', cursive;
-    color: white;
-    font-weight: 800;
-
 }
