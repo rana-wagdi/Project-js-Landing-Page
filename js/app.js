@@ -19,3 +19,13 @@ function navbarLinkClick(event){
         navbarToggler.click();
     }
 }
+//smooth-Scrolling
+
+function smoothScroll(event){
+    event.preventDefault();
+    const targetId= event.currentTarget.getAttribute("href");
+    window.scrollTo({
+        top:document.querySelector(targetId).offsetTop,
+        behavior:"smooth"
+    })
+}
