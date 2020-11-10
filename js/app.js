@@ -1,7 +1,18 @@
-function smoothScroll(target,duration){
-    var target=document.querySelector(target);
-    console.log(target);
-    var targetPosition=target.getBoundingClientRect();
-    console.log('targetPotsition');
+const navbarToggler =document.querySelector(".navbar-toggler");
+const navbarMenu =document.querySelector(".navbar ul");
+const navbarLinks = document.querySelectorAll(".navbar a");
+
+navbarToggler.addEventListener("click",navbarTogglerClick);
+
+function navbarTogglerClick(){
+    navbarToggler.classList.toggle("open-navbar-toggler");
+    navbarMenu.classList.toggle("open");
 }
-smoothScroll('.section2',1000);
+
+navbarLinks.forEach(elem => elem.addEventListener("click",navbarLinkClick));
+function navbarLinkClick(event){
+    smoothScroll(event); //call the 'smoothScroll' function
+    if(navbarMenu.classList.contains("open")){ //close navbarmenu in smaller screen
+        navbarToggler.click();
+    }
+}
